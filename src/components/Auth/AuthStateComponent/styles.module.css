@@ -1,0 +1,104 @@
+.mail_style {
+    font-size: 120%;
+    font-weight: 800;
+    margin: 20px;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.mail_text {
+    font-size: 120%;
+    padding-bottom: 20px;
+}
+
+.verified_text {
+    font-size: 120%;
+    padding-bottom: 10px;
+    color: green
+}
+
+.not_verified_text {
+    font-size: 120%;
+    padding-bottom: 10px;
+    color: red
+}
+
+.verify_msg {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: blue;
+    text-decoration: none;
+    font-family: 
+      'EireneSans',
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell, 
+      'Fira Sans',
+      'Droid Sans',
+      'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+.verify_again_button {
+    white-space: nowrap;
+    align-items: center;
+    background-image: grey;
+    border: 0;
+    border-radius: 8px;
+    border: solid grey;
+    box-shadow: rgba(83, 82, 84, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: grey;
+    font-family: 
+      'EireneSans',
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell, 
+      'Fira Sans',
+      'Droid Sans',
+      'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-size: 20px;
+    justify-content: center;
+    line-height: 1em;
+    width: 20vh;
+    height: 40px;
+    min-width: 120px;
+    margin: 10px 0;
+    padding: 12px 20px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.verify_again_button:active,
+.verify_again_button:hover {
+    outline: 0;
+    background-color: rgb(59, 59, 61);
+    color: white; 
+}
+
+  
+@media (min-width: 768px) {
+  .verify_again_button {
+    font-size: 100%;
+    min-width: 196px;
+  }
+}

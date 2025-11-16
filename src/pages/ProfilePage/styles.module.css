@@ -1,0 +1,290 @@
+.page_container {
+  display: flex;
+  width: 100vw;
+  min-height: 100vh
+}
+
+.page_title {
+  padding: 10px;
+  margin-top: 20px;
+  margin-left: 20px;
+  display: block;
+  position: relative;
+  justify-content: center;
+}
+
+.info_container {
+  flex: 0 0 70%;
+  width: 100%;
+  height: 100%;
+  max-width: 700px;
+  min-height: 100vh;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  background: hsla(0, 0%, 100%, 1);
+}
+
+.img_container {
+  flex: 1;
+  background: 
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url('images/profile_img.webp') left/cover no-repeat,
+    #2b0a4a;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 1%;
+}
+
+.profile_menu_option {
+  padding: 10px;
+  margin-left: 20px;
+  font-size: 150%;
+  display: block;
+  position: relative;
+  justify-content: center;
+}
+
+.input_field {
+    flex: 0 0 250px;
+    width: 40vh;
+    margin: 10px 0;
+    line-height: 1.5;
+    padding: 2px 5px;
+    padding-right: 30px;
+    font-size: 16px;
+    box-sizing: border-box; 
+    transition: all 0.3s ease;
+    resize: vertical;
+    font-family: 
+      'EireneSans',
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell, 
+      'Fira Sans',
+      'Droid Sans',
+      'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+.input_field::placeholder {
+    flex: 0 0 250px;
+    width: 40vh;
+    margin: 10px 0;
+    line-height: 1.5;
+    padding: 2px 5px;
+    padding-left: 0;
+    padding-right: 30px;
+    font-size: 16px;
+    box-sizing: border-box; 
+    transition: all 0.3s ease;
+    resize: vertical;
+    font-family: 
+      'EireneSans',
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell, 
+      'Fira Sans',
+      'Droid Sans',
+      'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+.input_name_change form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    align-items: center;
+    margin-left: 20px;
+    width: auto;
+    position: relative;
+}
+
+.input_button, .clear_lists_button, .add_to_wishlist_button {
+    white-space: nowrap;
+    align-items: center;
+    background-image: grey;
+    border: 0;
+    border-radius: 8px;
+    border: solid grey;
+    box-shadow: rgba(83, 82, 84, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: grey;
+    font-family: 
+      'EireneSans',
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell, 
+      'Fira Sans',
+      'Droid Sans',
+      'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-size: 20px;
+    justify-content: center;
+    line-height: 1em;
+    width: 20vh;
+    height: 40px;
+    min-width: 120px;
+    margin: 10px 0;
+    padding: 12px 20px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.clear_lists_button, .add_to_wishlist_button {
+  margin-left: 30px;
+}
+
+.input_button:active,
+.input_button:hover {
+    outline: 0;
+    background-color: rgb(59, 59, 61);
+    color: white; 
+}
+
+.clear_lists_button:active,
+.clear_lists_button:hover {
+    outline: 0;
+    background-color: rgb(59, 59, 61);
+    color: white; 
+}
+
+.add_to_wishlist_button:active,
+.add_to_wishlist_button:hover {
+    outline: 0;
+    background-color: rgb(234, 56, 86);
+    color: white; 
+}
+  
+@media (min-width: 768px) {
+  .input_button, .clear_lists_button, .add_to_wishlist_button {
+    font-size: 100%;
+    min-width: 196px;
+  }
+}
+
+.auth_method {
+    padding: 10px;
+    margin: 20px;
+    margin-bottom: 0;
+    display: block;
+    position: relative;
+    justify-content: center;
+}
+
+.separationLine {
+    color: grey;
+    width: 90%;
+    border-bottom: 1px dashed grey;
+    margin: 20px;
+    text-align: center;
+    font-family: 
+      'EireneSans',
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell, 
+      'Fira Sans',
+      'Droid Sans',
+      'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+
+.name_change_output, .name_change_output_random {
+    margin-top: 5px;
+    margin-left: 30px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 
+      'EireneSans',
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell, 
+      'Fira Sans',
+      'Droid Sans',
+      'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+.name_change_output {
+  color: red;
+}
+
+.name_change_output_random {
+  color: black;
+  display: flex;
+  white-space: nowrap;
+}
+
+.random_container {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.random_flag img {
+  width: 4vw;
+  border-radius: 0%;
+  box-shadow: 1px 1px 3px 0px;
+}
+
+.add_to_wishlist_button {
+  color: rgb(234, 56, 86);
+}
+
+.in_wishlist_button {
+    outline: 0;
+    background-color: rgb(234, 56, 86);
+    color: white; 
+}
+

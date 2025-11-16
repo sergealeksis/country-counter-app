@@ -1,0 +1,16 @@
+.root {
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+.root .visited {
+    content: '\u2713';
+    color: white;
+    
+}
+
+.root .notvisited{
+    color: lightblue;
+
+}

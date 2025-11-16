@@ -1,0 +1,29 @@
+.root {
+    display: contents;       
+}
+
+.profile {
+    display: flex;
+    cursor: pointer;
+    color: grey;
+    padding: 10px;
+    justify-content: center;
+    text-align: center;
+    font-family: 
+      'EireneSans',
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell, 
+      'Fira Sans',
+      'Droid Sans',
+      'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    text-decoration: none;
+  }

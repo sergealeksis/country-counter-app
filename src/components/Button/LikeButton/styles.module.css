@@ -1,0 +1,30 @@
+
+.root {
+    text-align: center;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.wish {
+    color: red;
+    display: flex;
+}
+
+.notwish {
+    color: lightgrey;
+    display: flex;
+}
+
+.hiddenWish {
+    display: none;
+}
+
+
+
+.popMain a, a:link, a:visited, a:focus, a:hover, a:active{
+    text-decoration: none;
+    text-align: center;
+    color: rgb(100, 149, 237);
+    border-bottom: 1px dashed rgb(100, 149, 237);
+    
+  }

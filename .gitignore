@@ -4,12 +4,29 @@
 /node_modules
 /.pnp
 .pnp.js
+.npm
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+*.log
 
 # testing
 /coverage
 
 # production
 /build
+/dist
+
+# Firebase
+.firebase/
+*.firebaserc
+
+# OS
+.DS_Store
+Thumbs.db
 
 # misc
 .DS_Store
@@ -17,7 +34,13 @@
 .env.development.local
 .env.test.local
 .env.production.local
+.env
+.env.development
+.env.production
+.env.test
 
+# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+lerna-debug.log*

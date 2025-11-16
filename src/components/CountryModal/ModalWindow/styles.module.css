@@ -1,0 +1,117 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    overflow: hidden;
+    overflow-y: auto;
+    transition: opacity 0.3s;
+    z-index: 999;
+    cursor: default;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.modal_wrapper {
+    position: relative;
+    height: 40%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    cursor: default;  
+}
+
+.modal_content {
+    position: relative;
+    margin: 0;
+    height: fit-content;
+    width: 70%;
+    min-width: 280px;
+    max-width: 400px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 35px 10px 10px 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-50px);
+    transition: opacity 0.3s, transform 0.3s;
+    cursor: default;
+    font-family: 
+      'EireneSans',
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell, 
+      'Fira Sans',
+      'Droid Sans',
+      'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+.modal_close_button {
+    display: flex;
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    margin: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    font-size: 110%;
+    font-family: sans-serif;
+    align-items: center;
+    justify-content: center;   
+}
+
+.modal_close_button:hover {
+    background-color: rgb(231, 230, 230);
+    border-radius: 10px;
+}
+
+img {
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
+    
+}
+
+@media (max-width: 768px) {
+    .modal_content {
+        padding: 30px 15px 15px 15px;
+    }
+    
+    .modal_close_button {
+        top: 5px;
+        right: 5px;
+        width: 25px;
+        height: 25px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal_content {
+        padding: 25px 10px 10px 10px;
+    }
+    
+    .modal_close_button {
+        top: 3px;
+        right: 3px;
+        width: 22px;
+        height: 22px;
+        font-size: 16px;
+    }
+}
+

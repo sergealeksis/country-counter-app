@@ -1,0 +1,267 @@
+.header {
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.input_container {
+    width: 40vh;
+    margin: 10px auto;
+}
+
+.email_input {
+    display: block;
+    box-sizing: border-box;
+    height: 40px;
+    width: 100%;
+    margin: 10px auto;
+    line-height: 2.5;
+    padding: 2px 5px;
+    padding-right: 30px;
+    font-size: 16px;
+    box-sizing: border-box; 
+    transition: all 0.3s ease;
+    resize: vertical;
+    font-family: 
+      'EireneSans',
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell, 
+      'Fira Sans',
+      'Droid Sans',
+      'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+.email_input_text {
+    margin-bottom: 5px;
+    color: grey;
+    font-family: 
+      'EireneSans',
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell, 
+      'Fira Sans',
+      'Droid Sans',
+      'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+.email_output_text {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: red;
+    text-decoration: none;
+    font-family: 
+      'EireneSans',
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell, 
+      'Fira Sans',
+      'Droid Sans',
+      'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+.reset_password_container {
+    position: relative;
+    height: max-content;
+    width: 100%;
+}
+
+.reset_password_text {
+    cursor: pointer;
+    margin-top: -5;
+    color: blue;
+}
+
+.reset_link_text {
+    cursor: pointer;
+    margin-top: -5;
+    margin-bottom: 20px;
+    color: blue;
+}
+
+.input_inner {
+    position: relative;
+    width: 100%;
+}
+
+.toggle_button {
+    position: absolute;
+    box-sizing: border-box;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-40%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: grey;
+    padding: 0;
+    z-index: 1;
+}
+
+.toggle_button_up {
+    position: absolute;
+    box-sizing: border-box;
+    right: 10px;
+    top: 30%;
+    transform: translateY(-40%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: grey;
+    padding: 0;
+    z-index: 1;
+}
+
+.sign_button, .reset_button {
+  width: 100%;
+  align-items: center;
+  background-image: linear-gradient(144deg,#650DB1, #A370D2 50%,#90859a);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: 
+      'EireneSans',
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell, 
+      'Fira Sans',
+      'Droid Sans',
+      'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  font-size: 200%;
+  justify-content: center;
+  line-height: 1em;
+  padding: 3px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.sign_button:active,
+.sign_button:hover {
+  outline: 0;
+}
+
+.reset_button:active,
+.reset_button:hover {
+  outline: 0;
+}
+
+.sign_button span, .reset_button span {
+  background-color: rgb(59, 59, 61);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.sign_button:hover span, .reset_button:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .sign_button, .reset_button {
+    font-size: 100%;
+    min-width: 196px;
+  }
+}
+
+
+.need_acc_button, .cancel_reset_button {
+  width: 100%;
+  align-items: center;
+  background-image: linear-gradient(144deg,#650DB1, #A370D2 50%,#90859a);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: 
+      'EireneSans',
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell, 
+      'Fira Sans',
+      'Droid Sans',
+      'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  font-size: 100%;
+  justify-content: center;
+  line-height: 1em;
+  margin-bottom: 10px;
+  padding: 19px 24px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.need_acc_button:active,
+.need_acc_button:hover {
+  outline: 0;
+  background-image: linear-gradient(144deg,#90859a, #A370D2 50%,#650DB1);
+}
+
+.cancel_reset_button:active,
+.cancel_reset_button:hover {
+  outline: 0;
+  background-image: linear-gradient(144deg,#90859a, #A370D2 50%,#650DB1);
+}
+
+@media (min-width: 768px) {
+  .need_acc_button, .cancel_reset_button {
+    font-size: 100%;
+    min-width: 196px;
+  }
+}

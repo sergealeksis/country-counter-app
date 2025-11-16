@@ -1,0 +1,124 @@
+.page_layout {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+  
+}
+
+.back_home_button {
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    margin: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    font-size: 110%;
+    font-family: sans-serif;
+    align-items: center;
+    justify-content: center;   
+}
+
+.back_home_button:hover {
+    background-color: rgb(231, 230, 230);
+    border-radius: 10px;
+}
+
+.signin_container {
+  flex: 0 0 50%;
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+  min-height: 100vh;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background: hsla(0, 0%, 100%, 1);
+  background: linear-gradient(90deg, hsla(0, 0%, 100%, 1) 0%, hsla(300, 11%, 93%, 1) 100%);
+  background: -moz-linear-gradient(90deg, hsla(0, 0%, 100%, 1) 0%, hsla(300, 11%, 93%, 1) 100%);
+  background: -webkit-linear-gradient(90deg, hsla(0, 0%, 100%, 1) 0%, hsla(300, 11%, 93%, 1) 100%);
+}
+
+.alt_method_container {
+    width: 100%;
+    justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.separation_line {
+  position: relative;
+  color: grey;
+  width: clamp(200px, 30%, 400px);
+  border-bottom: 1px solid grey;
+  padding: 10px;
+  margin: 25px auto 15px;
+  text-align: center;
+  font-family: 
+    'EireneSans',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell, 
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  transition: all 0.3s ease;
+}
+
+
+
+.auth_container {
+  display: block;
+  
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+
+}
+
+.img_container {
+  flex: 1;
+  background: 
+    url('images/sign_img_3.webp') center/cover no-repeat;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .page_layout {
+    flex-direction: column;
+  }
+  
+  .signin_container {
+    flex: 1;
+    min-height: auto;
+    padding: 60px 20px;
+  }
+  
+  .img_container {
+    min-height: 300px;
+    order: -1;
+  }
+  
+  .auth_container {
+    padding: 30px 20px;
+  }
+}

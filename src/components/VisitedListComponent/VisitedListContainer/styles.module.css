@@ -1,0 +1,210 @@
+.root {
+    width: 100%;
+    height: fit-content;
+    transition: all 0.3s ease;
+}
+
+.visitedContainer {
+    display: inline-flex;
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+}
+
+.visitedContainer::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 1%;
+    right: 1%;
+    height: 1px;
+    background-color: rgb(214, 208, 208);
+    transition: all 0.3s ease;
+}
+
+.visitedContainer:hover {
+    background: linear-gradient(144deg,#5a585d, #c4b2d5 50%,#b6adbf);
+	background-size: 200% 200%;
+	animation: gradient 3s ease infinite;
+    cursor: default;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.visitedContainer:hover::after {
+    opacity: 0;
+    height: 0;
+}
+
+
+@keyframes gradient {
+    0% { 
+        background-position: 0% 50%; 
+    }
+    50% { 
+        background-position: 100% 50%; 
+    }
+    100% { 
+        background-position: 0% 50%; 
+    }
+}
+
+.flag {
+    flex-shrink: 0;
+    padding: 0 15px;
+    position: relative;
+    display: block;
+    width: fit-content;
+    align-self: center;
+    padding-left: 30px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.flag img {
+    height: 9vh;
+    width: 9vh;
+    box-shadow: none;
+}
+
+.name {
+    position: relative;
+    display: block;
+    font-family: 
+      'EireneSans',
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell, 
+      'Fira Sans',
+      'Droid Sans',
+      'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    align-self: center;
+    font-size: 300%;
+    font-weight: 100;
+    letter-spacing: 5px;
+    color: #0a0806;
+    padding-left: 20px;
+    word-break: keep-all;
+}
+
+.visitedContainer:hover .name {
+    color: aliceblue;
+}
+
+
+.nameShake {
+    position: relative;
+    display: block;
+    font-family: 
+      'EireneSans',
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell, 
+      'Fira Sans',
+      'Droid Sans',
+      'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    align-self: center;
+    font-size: 300%;
+    font-weight: 550;
+    letter-spacing: 10px;
+    color: #0a0806;
+    padding-left: 20px;
+    word-break: keep-all;
+    animation: 1s shake infinite;
+}
+
+
+
+.showDeleteButton {
+    display: flex;
+    position: absolute;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #888;
+    z-index: 10;
+    transition: all 0.3s ease;
+    animation: 1s shake infinite;
+}
+
+.showDeleteButton:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    color: rgb(59, 59, 61);
+    transform: scale(1.1);
+}
+
+.hideDeleteButton {
+    display: none;
+}
+
+.nameShake {
+    flex: 1;
+    text-align: center;
+    font-family: 
+      'EireneSans',
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell, 
+      'Fira Sans',
+      'Droid Sans',
+      'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    font-weight: 550;
+    letter-spacing: 3px;
+    color: #0a0806;
+    padding: 0 20px;
+    word-break: break-word;
+    animation: 1s shake infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px)}
+    10% { transform: translate(-1px)}
+    20% { transform: translate(1px)}
+    30% { transform: translate(-1px)}
+    40% { transform: translate(1px)}
+    50% { transform: translate(-1px)}
+    60% { transform: translate(1px)}
+    70% { transform: translate(-1px)}
+    80% { transform: translate(1px)}
+    90% { transform: translate(-1px)}
+    100% { transform: translate(1px)}
+  }
+
+
+
+
