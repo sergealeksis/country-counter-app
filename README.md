@@ -15,4 +15,4 @@ travel tracking application built with react and firebase
 
 ## info
 - ui/ux is currently optimized only for desktop browsers (chrome and safari)
-- now i'm working on mobile ui/ux 
+- mobile ui/ux in progress
