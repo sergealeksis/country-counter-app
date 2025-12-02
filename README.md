@@ -2,7 +2,7 @@
 
 travel tracking application built with react and firebase
 
-## for what?
+## for what
 - track visited countries
 - create travel wishlists
 - share your travel map with friends
