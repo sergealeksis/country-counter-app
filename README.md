@@ -16,5 +16,4 @@ travel tracking application built with react and firebase
 ## info
 - ui/ux is currently optimized only for desktop browsers (chrome and safari)
 - mobile ui/ux in progress
-
-countrycounter.online
+- located at https://countrycounter.online
