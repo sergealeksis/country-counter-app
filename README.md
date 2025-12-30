@@ -1,22 +1,19 @@
-# Country Counter
+# country counter
 
-Travel tracking application built with React and Firebase.
+travel tracking application built with react and firebase
 
-## Features
-- Track visited countries;
-- Create travel wishlists;
-- Share your travel map with friends;
-- Real-time data synchronization.
+## for what
+- track visited countries
+- create travel wishlists
+- share your travel map with friends
 
-## Stack
-- React
-- Redux
-- Firebase (Firestore, Auth)
-- React Router
+## what i used
+- react
+- react router
+- redux
+- firebase (firestore, auth)
 
-## Setup
-1. Clone repository
-2. `npm install`
-3. Create Firebase project
-4. Configure environment variables
-5. `npm start`
+## info
+- ui/ux is currently optimized only for desktop browsers (chrome and safari)
+- mobile ui/ux in progress
+- located at https://countrycounter.online
