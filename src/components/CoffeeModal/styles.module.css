@@ -113,7 +113,12 @@
     font-size: 110%;
     font-family: sans-serif;
     align-items: center;
-    justify-content: center;   
+    justify-content: center; 
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    outline: none; 
+    color: #333;   
 }
 
 .modal_close_button:hover {
@@ -127,6 +132,33 @@
     width: 3vw;
     height: auto;
     margin: 5px;
+}
+
+.modal_title {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin: 20px 0;
+    width: 100%; 
+    text-align: center;
+    font-size: 140%;
+    font-weight: 900;
+    font-family: 
+      'EireneSans',
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell, 
+      'Fira Sans',
+      'Droid Sans',
+      'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 .modal_text {
@@ -166,8 +198,8 @@ img {
     align-items: center;
     justify-content: center;  
     box-shadow: none;
-    width: 3vw;
-    height: 3vh;
+    width: 25px;
+    height: 25px;
     margin: 5px;
     border: none;
     background-color: white;
@@ -177,6 +209,9 @@ img {
     color: rgb(81, 81, 81);
     border: 1px solid lightgrey;
     border-radius: 5px;
+    position: relative;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .copied {
@@ -222,6 +257,19 @@ img {
         height: 25px;
         font-size: 18px;
     }
+
+    .adress_and_copy {
+        font-size: 90%;
+    }
+
+    .clipboard_button {
+        width: 25px;
+        height: 25px;
+    }
+
+    .modal_qr {
+        display: none;
+    }
 }
 
 @media (max-width: 480px) {
@@ -244,6 +292,19 @@ img {
         width: 22px;
         height: 22px;
         font-size: 16px;
+    }
+
+    .adress_and_copy {
+        font-size: 90%;
+    }
+
+    .clipboard_button {
+        width: 25px;
+        height: 25px;
+    }
+
+    .modal_qr {
+        display: none;
     }
 }
 

@@ -1,34 +1,84 @@
-.root {
+.root, .root_mobile {
     position: relative;
-    display: inline flex;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
-    place-self: center;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    margin: 1px;
+    margin-top: 5px;
+    line-height: 0;
+}
+
+.root_mobile {
+    align-self: flex-start; 
+    -webkit-box-pack: start; 
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    line-height: 0;
+    text-align: left;
 }
 
 .wrapper { 
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
     background-color: black;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    line-height: 0;
 }
 
-.actionButtons {
+.actionButtons, .actionButtons_mobile {
     position: relative;
-    display: inline flex;
-    visibility: hidden;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.actionButtons_mobile {
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
 .actionIfVisited {
     position: relative;
-    display: inline flex;
-    visibility: hidden;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     text-align: center;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    line-height: 0;
 }
 
 .actionIfVisited:last-child {
@@ -36,103 +86,175 @@
 }
 
 .actionIfVisited .visited {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    /* transition-delay: 350ms; */
-    /* transition-timing-function: ease-in-out; */
-    visibility: hidden;
-    place-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     height: 0px;
     width: 0px;
     background-color: #2edf9b;
+    -webkit-border-radius: 5px;
     border-radius: 5px;
+    visibility: hidden;
+    line-height: 0;
 }
 
-
 .flag {
-    visibility: hidden;
     padding-right: 10px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
-    place-content: center;
+    -ms-flex-line-pack: center;
     align-content: center;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+    -ms-flex-negative: 0;
     flex-shrink: 0;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
 }
 
 .flag img {
     display: block;
     max-width: 100%;
     height: auto;
+    -o-object-fit: contain;
     object-fit: contain;
-
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+    line-height: 0;
 }
 
 .like, .wished {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    height: 0px;
-    width: 0px;
-    visibility: hidden;
-    place-self: center;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
 }
 
 .wished {
-    color: rgb(234, 56, 86) !important;
+    color: #ea3856 !important;
 }
 
 .animating {
+    -webkit-animation: pulse 0.6s ease-out !important;
     animation: pulse 0.6s ease-out !important;
-    color: rgb(234, 56, 86) !important;
+    color: #ea3856 !important;
 }
 
-.country:hover .wished:hover {
-    color: rgb(234, 56, 86);
+.country:hover .wished:hover,
+.country_mobile:hover .wished:hover {
+    color: #ea3856;
+    -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
 
-.country:hover .like:hover {
+.country:hover .like:hover,
+.country_mobile:hover .like:hover {
+    -webkit-transform: scale(1.1);
     transform: scale(1.1);
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-filter: drop-shadow(0 0 0 rgba(255, 44, 116, 0));
+        filter: drop-shadow(0 0 0 rgba(255, 44, 116, 0));
+    }
+    50% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        -webkit-filter: drop-shadow(0 0 10px rgba(255, 44, 116, 0.8));
+        filter: drop-shadow(0 0 10px rgba(255, 44, 116, 0.8));
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-filter: drop-shadow(0 0 0 rgba(255, 44, 116, 0));
+        filter: drop-shadow(0 0 0 rgba(255, 44, 116, 0));
+    }
 }
 
 @keyframes pulse {
     0% {
+        -webkit-transform: scale(1);
         transform: scale(1);
+        -webkit-filter: drop-shadow(0 0 0 rgba(255, 44, 116, 0));
         filter: drop-shadow(0 0 0 rgba(255, 44, 116, 0));
     }
     50% {
+        -webkit-transform: scale(1.2);
         transform: scale(1.2);
+        -webkit-filter: drop-shadow(0 0 10px rgba(255, 44, 116, 0.8));
         filter: drop-shadow(0 0 10px rgba(255, 44, 116, 0.8));
     }
     100% {
+        -webkit-transform: scale(1);
         transform: scale(1);
+        -webkit-filter: drop-shadow(0 0 0 rgba(255, 44, 116, 0));
         filter: drop-shadow(0 0 0 rgba(255, 44, 116, 0));
     }
 }
-
-
 
 .likeIfVisited {
     display: none;
 }
 
 .add, .visited {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    height: 0px;
-    width: 0px;
-    visibility: hidden;
-    place-self: center;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     color: whitesmoke;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
 }
 
 .add:hover {
+    -webkit-animation: pulse 1s!important;
     animation: pulse 1s ease-out !important;
 }
 
-.country {
+.country, .country_mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     height: 5vh;
+    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
     color: whitesmoke;
     font-family: 
@@ -154,70 +276,122 @@
     font-size: clamp(24px, 4vw, 400%);
     cursor: pointer;
     text-align: center;
-    place-self: center;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     white-space: nowrap;
     overflow: hidden;
-    transition: color 0.3s ease;   
+    -webkit-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+    margin: 0 10px;
+    padding: 0;
+    line-height: 0;
 }
 
+.country_mobile {
+    font-size: clamp(48px, 8vw, 800%);
+}
 
-.country:hover {
+.country:hover,
+.country_mobile:hover {
     color: #9fd6c1;
 }
 
-.country:hover .flag img{ 
+.country:hover .flag,
+.country_mobile:hover .flag {
+    -webkit-transition-delay: 150ms;
     transition-delay: 150ms;
+    -webkit-transition-timing-function: ease-in-out;
     transition-timing-function: ease-in-out;
     visibility: visible;
-    height: 100%;
     width: 3vw;
+    height: auto;
     margin-left: 5px;
     min-width: 50px;
+    padding-right: 10px;
+}
+
+.country:hover .flag img,
+.country_mobile:hover .flag img {
+    opacity: 1;
+    height: 100%;
     min-height: 50px;
 }
 
-.country:hover .wished {
+.country:hover .wished,
+.country_mobile:hover .wished {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     font-size: 90%;
-    transition-delay: 250ms;
+    -webkit-transition-delay: 300ms;
+    transition-delay: 300ms;
+    -webkit-transition-timing-function: ease-in-out;
     transition-timing-function: ease-in-out;
     visibility: visible;
-    place-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     height: 3vh;
     width: 3vw;
     min-width: 30px;
     min-height: 30px;
-    color: red;
+    color: #ea3856;
+    -o-object-fit: contain;
     object-fit: contain;
-
 }
 
-.country:hover .like {
+.country:hover .like,
+.country_mobile:hover .like {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     font-size: 90%;
-    transition-delay: 250ms;
+    -webkit-transition-delay: 300ms;
+    transition-delay: 300ms;
+    -webkit-transition-timing-function: ease-in-out;
     transition-timing-function: ease-in-out;
     visibility: visible;
-    place-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     height: 3vh;
     width: 3vw;
     min-width: 30px;
     min-height: 30px;
     color: whitesmoke;
+    -o-object-fit: contain;
     object-fit: contain;
-
 }
 
-.country:hover .add {
+.country:hover .add,
+.country_mobile:hover .add {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    transition-delay: 350ms;
+    -webkit-transition-delay: 450ms;
+    transition-delay: 450ms;
+    -webkit-transition-timing-function: ease-in-out;
     transition-timing-function: ease-in-out;
     visibility: visible;
-    place-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     font-size: 60%;
     font-family: 
@@ -242,10 +416,17 @@
     min-height: 30px;
 }
 
-.country:hover .visited {
+.country:hover .visited,
+.country_mobile:hover .visited {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     visibility: visible;
-    place-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     font-size: 60%;
     font-weight: lighter;
@@ -271,4 +452,162 @@
     pointer-events: none;
 }
 
+.country:hover .actionButtons,
+.country:hover .actionIfVisited,
+.country_mobile:hover .actionButtons,
+.country_mobile:hover .actionIfVisited {
+    visibility: visible;
+    width: auto;
+    height: auto;
+    overflow: visible;
+}
+
+.country_mobile:hover .flag,
+.country_mobile:hover .like,
+.country_mobile:hover .wished,
+.country_mobile:hover .add,
+.country_mobile:hover .visited {
+    box-sizing: border-box; 
+    transition: margin 0.3s ease, padding 0.3s ease; 
+}
+
+@supports (-webkit-touch-callout: none) {
+    .country,
+    .country_mobile {
+        -webkit-tap-highlight-color: transparent;
+        margin: 0 15px;
+        padding: 0;
+        line-height: 0;
+        height: 4.8vh;
+    }
+    
+    .root,
+    .root_mobile {
+        -webkit-tap-highlight-color: transparent;
+        margin: 4px 8px;
+        line-height: 0;
+    }
+    
+    .wrapper {
+        line-height: 0;
+    }
+    
+    .actionButtons,
+    .actionIfVisited {
+        -webkit-tap-highlight-color: transparent;
+        line-height: 0;
+    }
+    
+    .flag,
+    .like,
+    .wished,
+    .add,
+    .visited {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        line-height: 0;
+    }
+    
+    * {
+        line-height: 1;
+    }
+    
+    .country,
+    .country_mobile,
+    .root,
+    .root_mobile,
+    .wrapper,
+    .actionButtons,
+    .actionIfVisited,
+    .flag,
+    .like,
+    .wished,
+    .add,
+    .visited {
+        line-height: 0 !important;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .country_mobile:hover .flag {
+        margin-left: 5px; 
+        margin-right: 5px; 
+        padding-right: 8px;
+        width: 5vw;
+    height: auto;
+    }
+    
+    .country_mobile:hover .wished,
+    .country_mobile:hover .like {
+        margin-left: 3px; 
+        margin-right: 3px; 
+        padding-left: 2px; 
+        padding-right: 2px; 
+    }
+    
+    .country_mobile:hover .add {
+        margin-left: 3px; 
+        margin-right: 3px; 
+        padding-left: 2px; 
+        padding-right: 2px; 
+    }
+    
+    .country_mobile:hover .visited {
+        margin-left: 5px; 
+        margin-right: 5px; 
+        padding-left: 3px; 
+        padding-right: 3px; 
+        width: calc(3vw + 3vw + 10px); 
+        min-width: calc(30px + 30px + 10px);
+    }
+    
+    
+    .country_mobile:hover .actionButtons,
+    .country_mobile:hover .actionIfVisited {
+        margin-left: 2px; 
+        margin-right: 2px; 
+        padding-left: 2px; 
+        padding-right: 2px; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    .country_mobile:hover .flag {
+        margin-left: 3px; 
+        margin-right: 3px; 
+        padding-right: 6px; 
+    }
+    
+    .country_mobile:hover .wished,
+    .country_mobile:hover .like,
+    .country_mobile:hover .add,
+    .country_mobile:hover .visited {
+        margin-left: 2px; 
+        margin-right: 2px;
+        padding-left: 1px; 
+        padding-right: 1px; 
+    }
+}
+
+@supports (-webkit-touch-callout: none) {
+    @media (max-width: 768px) {
+        .country_mobile:hover .flag {
+            -webkit-margin-start: 5px; 
+            -webkit-margin-end: 5px; 
+        }
+        
+        .country_mobile:hover .wished,
+        .country_mobile:hover .like,
+        .country_mobile:hover .add,
+        .country_mobile:hover .visited {
+            -webkit-margin-start: 3px;
+            -webkit-margin-end: 3px;
+            -webkit-padding-start: 2px;
+            -webkit-padding-end: 2px;
+        }
+    }
+}
 

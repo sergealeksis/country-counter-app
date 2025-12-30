@@ -73,7 +73,12 @@
     font-size: 110%;
     font-family: sans-serif;
     align-items: center;
-    justify-content: center;   
+    justify-content: center;  
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    outline: none; 
+    color: #333;
 }
 
 .modal_close_button:hover {
@@ -87,31 +92,8 @@ img {
     
 }
 
-@media (max-width: 768px) {
-    .modal_content {
-        padding: 30px 15px 15px 15px;
-    }
-    
-    .modal_close_button {
-        top: 5px;
-        right: 5px;
-        width: 25px;
-        height: 25px;
-        font-size: 18px;
-    }
-}
 
-@media (max-width: 480px) {
-    .modal_content {
-        padding: 25px 10px 10px 10px;
-    }
-    
-    .modal_close_button {
-        top: 3px;
-        right: 3px;
-        width: 22px;
-        height: 22px;
-        font-size: 16px;
-    }
-}
+
+
+
 

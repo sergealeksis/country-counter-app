@@ -1,10 +1,12 @@
 .root {
-    display: inline flex;
-    margin: 10px;
-    background-color:  whitesmoke;
-    cursor: pointer;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+  display: flex;
+  margin: 0;
+  background-color: whitesmoke;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  flex-shrink: 0;
+  min-width: 0;
+  max-width: 100%;
+  object-fit: contain;
 }
-
-

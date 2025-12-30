@@ -1,11 +1,18 @@
 .anonymuously_button {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
-    background-image: grey;
-    border: 0;
-    border-radius: 8px;
-    box-shadow: rgba(83, 82, 84, 0.2) 0 15px 30px -5px;
-    box-sizing: border-box;
     color: grey;
+    background-color: rgb(240, 240, 240);
+    border: 0;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: rgba(83, 82, 84, 0.2) 0 15px 30px -5px;
+    box-shadow: rgba(83, 82, 84, 0.2) 0 15px 30px -5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #808080;
     display: block;
     font-family: 
       'EireneSans',
@@ -23,43 +30,49 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    font-size: 20px;
+    font-size: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     line-height: 1em;
     width: 40vh;
-    margin-left: 20px;
-    margin-bottom: 10px;
-    margin: 50px auto 10px;
+    max-width: 100%;
+    margin: 40px auto 10px;
     padding: 19px 24px;
     text-decoration: none;
-    user-select: none;
     -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -ms-touch-action: manipulation;
     touch-action: manipulation;
     white-space: nowrap;
     cursor: pointer;
-  }
-  
-  .anonymuously_button:active,
-  .anonymuously_button:hover {
-    outline: 0;
-    background-color:  rgba(83, 82, 84, 0.2);
-    color: rgb(105, 105, 105);
-  
-  }
-  
-  @media (min-width: 768px) {
-    .anonymuously_button {
-      font-size: 100%;
-      min-width: 196px;
-    }
-  }
+    -webkit-tap-highlight-color: transparent;
+    min-height: 44px;
+}
 
-    .anonymuously_output_text {
-      margin-top: 5px;
-      margin-bottom: 10px;
-      color: red;
-      text-decoration: none;
-      font-family: 
+.anonymuously_button:active,
+.anonymuously_button:hover {
+    outline: 0;
+    background-color: rgba(83, 82, 84, 0.2);
+    color: #696969;
+}
+
+@media (max-width: 768px) {
+    .anonymuously_button {
+        font-size: 100%;
+        min-width: 196px;
+    }
+}
+
+.anonymuously_output_text {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: red;
+    text-decoration: none;
+    font-family: 
         'EireneSans',
         -apple-system,
         BlinkMacSystemFont,
@@ -72,7 +85,8 @@
         'Droid Sans',
         'Helvetica Neue',
         sans-serif;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-size: 16px;
 }

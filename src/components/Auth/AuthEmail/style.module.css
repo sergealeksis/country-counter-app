@@ -1,7 +1,19 @@
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
 .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin: 20px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -12,6 +24,8 @@
 
 .email_input {
     display: block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
     height: 40px;
     width: 100%;
@@ -20,7 +34,9 @@
     padding: 2px 5px;
     padding-right: 30px;
     font-size: 16px;
-    box-sizing: border-box; 
+    text-indent: 1px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
     resize: vertical;
     font-family: 
@@ -39,6 +55,9 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    -webkit-appearance: none;
+    border-radius: 0;
+    min-height: 40px;
 }
 
 .email_input_text {
@@ -87,19 +106,21 @@
 
 .reset_password_container {
     position: relative;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     width: 100%;
 }
 
 .reset_password_text {
     cursor: pointer;
-    margin-top: -5;
+    margin-top: -5px;
     color: blue;
 }
 
 .reset_link_text {
     cursor: pointer;
-    margin-top: -5;
+    margin-top: -5px;
     margin-bottom: 20px;
     color: blue;
 }
@@ -111,9 +132,13 @@
 
 .toggle_button {
     position: absolute;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
     right: 10px;
     top: 50%;
+    -webkit-transform: translateY(-40%);
+    -ms-transform: translateY(-40%);
     transform: translateY(-40%);
     background: none;
     border: none;
@@ -125,9 +150,13 @@
 
 .toggle_button_up {
     position: absolute;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
     right: 10px;
     top: 30%;
+    -webkit-transform: translateY(-40%);
+    -ms-transform: translateY(-40%);
     transform: translateY(-40%);
     background: none;
     border: none;
@@ -138,130 +167,191 @@
 }
 
 .sign_button, .reset_button {
-  width: 100%;
-  align-items: center;
-  background-image: linear-gradient(144deg,#650DB1, #A370D2 50%,#90859a);
-  border: 0;
-  border-radius: 8px;
-  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  display: flex;
-  font-family: 
-      'EireneSans',
-      -apple-system,
-      BlinkMacSystemFont,
-      'Segoe UI',
-      Roboto,
-      Oxygen,
-      Ubuntu,
-      Cantarell, 
-      'Fira Sans',
-      'Droid Sans',
-      'Helvetica Neue',
-      sans-serif;
+    width: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-image: -webkit-gradient(linear, left top, right top, from(#650DB1), color-stop(50%, #A370D2), to(#90859a));
+    background-image: -webkit-linear-gradient(144deg, #650DB1, #A370D2 50%, #90859a);
+    background-image: -o-linear-gradient(144deg, #650DB1, #A370D2 50%, #90859a);
+    background-image: linear-gradient(144deg, #650DB1, #A370D2 50%, #90859a);
+    border: 0;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-family: 
+        'EireneSans',
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell, 
+        'Fira Sans',
+        'Droid Sans',
+        'Helvetica Neue',
+        sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-  font-size: 200%;
-  justify-content: center;
-  line-height: 1em;
-  padding: 3px;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  cursor: pointer;
+    font-size: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    line-height: 1em;
+    padding: 3px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
 }
 
 .sign_button:active,
 .sign_button:hover {
-  outline: 0;
+    outline: 0;
 }
 
 .reset_button:active,
 .reset_button:hover {
-  outline: 0;
+    outline: 0;
 }
 
 .sign_button span, .reset_button span {
-  background-color: rgb(59, 59, 61);
-  padding: 16px 24px;
-  border-radius: 6px;
-  width: 100%;
-  height: 100%;
-  transition: 300ms;
+    background-color: rgb(59, 59, 61);
+    padding: 16px 24px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: 300ms;
+    -o-transition: 300ms;
+    transition: 300ms;
 }
 
 .sign_button:hover span, .reset_button:hover span {
-  background: none;
+    background: none;
 }
-
-@media (min-width: 768px) {
-  .sign_button, .reset_button {
-    font-size: 100%;
-    min-width: 196px;
-  }
-}
-
 
 .need_acc_button, .cancel_reset_button {
-  width: 100%;
-  align-items: center;
-  background-image: linear-gradient(144deg,#650DB1, #A370D2 50%,#90859a);
-  border: 0;
-  border-radius: 8px;
-  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  display: flex;
-  font-family: 
-      'EireneSans',
-      -apple-system,
-      BlinkMacSystemFont,
-      'Segoe UI',
-      Roboto,
-      Oxygen,
-      Ubuntu,
-      Cantarell, 
-      'Fira Sans',
-      'Droid Sans',
-      'Helvetica Neue',
-      sans-serif;
+    width: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-image: -webkit-gradient(linear, left top, right top, from(#650DB1), color-stop(50%, #A370D2), to(#90859a));
+    background-image: -webkit-linear-gradient(144deg, #650DB1, #A370D2 50%, #90859a);
+    background-image: -o-linear-gradient(144deg, #650DB1, #A370D2 50%, #90859a);
+    background-image: linear-gradient(144deg, #650DB1, #A370D2 50%, #90859a);
+    border: 0;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-family: 
+        'EireneSans',
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell, 
+        'Fira Sans',
+        'Droid Sans',
+        'Helvetica Neue',
+        sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-  font-size: 100%;
-  justify-content: center;
-  line-height: 1em;
-  margin-bottom: 10px;
-  padding: 19px 24px;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  cursor: pointer;
+    font-size: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    line-height: 1em;
+    margin-bottom: 10px;
+    padding: 19px 24px;
+    text-decoration: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
 }
 
 .need_acc_button:active,
 .need_acc_button:hover {
-  outline: 0;
-  background-image: linear-gradient(144deg,#90859a, #A370D2 50%,#650DB1);
+    outline: 0;
+    background-image: -webkit-gradient(linear, left top, right top, from(#90859a), color-stop(50%, #A370D2), to(#650DB1));
+    background-image: -webkit-linear-gradient(144deg, #90859a, #A370D2 50%, #650DB1);
+    background-image: -o-linear-gradient(144deg, #90859a, #A370D2 50%, #650DB1);
+    background-image: linear-gradient(144deg, #90859a, #A370D2 50%, #650DB1);
 }
 
 .cancel_reset_button:active,
 .cancel_reset_button:hover {
-  outline: 0;
-  background-image: linear-gradient(144deg,#90859a, #A370D2 50%,#650DB1);
+    outline: 0;
+    background-image: -webkit-gradient(linear, left top, right top, from(#90859a), color-stop(50%, #A370D2), to(#650DB1));
+    background-image: -webkit-linear-gradient(144deg, #90859a, #A370D2 50%, #650DB1);
+    background-image: -o-linear-gradient(144deg, #90859a, #A370D2 50%, #650DB1);
+    background-image: linear-gradient(144deg, #90859a, #A370D2 50%, #650DB1);
 }
 
-@media (min-width: 768px) {
-  .need_acc_button, .cancel_reset_button {
-    font-size: 100%;
-    min-width: 196px;
-  }
+
+@media (max-width: 768px) {
+
+    .sign_button, 
+    .reset_button, 
+    .need_acc_button,
+    .cancel_reset_button {
+        height: 50px;
+        font-size: 100%;
+    }
+
+    .sign_button span, .reset_button span {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
 }
+
+@supports (-webkit-touch-callout: none) {
+    .email_input {
+        line-height: 1.4; 
+        padding-top: 8px; 
+        padding-bottom: 8px; 
+        height: auto;
+    }
+}
+
+
+

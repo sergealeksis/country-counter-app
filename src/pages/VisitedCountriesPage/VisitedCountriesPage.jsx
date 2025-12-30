@@ -103,8 +103,11 @@ export const VisitedCountriesPage = () => {
     } else if (visitedCountries.length === 1) {
       return (
         <div>
-          <h1 className={styles.h1}>{ 
-            `${userName()}, you've been to ${visitedCountries.length} country 🎉`}</h1>
+          <h1 className={styles.h1}>
+            {userName()}, you've been to {' '}
+              <br className={styles.mobileBreak} />
+            {visitedCountries.length} country 🎉
+          </h1>
           <h2 className={styles.h2}>
               What's next on your journey? 🗺️</h2>
           <button 
@@ -118,8 +121,11 @@ export const VisitedCountriesPage = () => {
     } else {
       return (
       <div>
-          <h1 className={styles.h1}>{ 
-            `${userName()}, you've been to ${visitedCountries.length} countries 🎉`}</h1>
+          <h1 className={styles.h1}>
+            {userName()}, you've been to {' '}
+              <br className={styles.mobileBreak} />
+            {visitedCountries.length} countries 🎉
+          </h1>
           <h2 className={styles.h2}>
               What's next on your journey? 🗺️</h2>
           <button 

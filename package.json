@@ -1,5 +1,5 @@
 {
-  "name": "country counter app",
+  "name": "country_counter_app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -37,7 +37,12 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "css:modules": "npx postcss \"src/**/styles.module.css\" --base src --dir dist",
+    "css:watch": "npx postcss \"src/**/styles.module.css\" --base src --dir dist --watch",
+    "css:build": "npm run css:modules",
+    "deploy": "npm run build && npx firebase-tools deploy --only hosting",
+    "deploy:prod": "npm run build && npx firebase-tools deploy --only hosting --project production"
   },
   "eslintConfig": {
     "extends": [
@@ -56,5 +61,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.22",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1"
   }
 }

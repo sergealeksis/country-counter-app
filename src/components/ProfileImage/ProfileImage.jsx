@@ -29,7 +29,7 @@ if (user.photoURL && providerName === 'github.com') {
 }
 
 if (user.photoURL) {
-    return <img alt={displayName} width='40px' src={user.photoURL} className={styles.image} />
+    return <img alt={'\u2708'} width='40px' src={user.photoURL} className={styles.image} />
   }
 
 return (

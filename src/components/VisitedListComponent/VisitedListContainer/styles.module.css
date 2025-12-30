@@ -19,8 +19,8 @@
     content: '';
     position: absolute;
     bottom: -1px;
-    left: 1%;
-    right: 1%;
+    left: 3%;
+    right: 3%;
     height: 1px;
     background-color: rgb(214, 208, 208);
     transition: all 0.3s ease;
@@ -204,6 +204,47 @@
     90% { transform: translate(-1px)}
     100% { transform: translate(1px)}
   }
+
+@media (max-width: 768px) {
+    
+    .flag {
+        padding-left: 15px;
+        padding-right: 5px;
+    }
+    
+    .flag img {
+        height: 4vh;
+        width: auto;
+    }
+    
+    .name {
+        font-size: 125%;
+        letter-spacing: 2px;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        display: inline-flex;
+    }
+
+    
+}
+
+@media (max-width: 480px) {
+    
+    .flag {
+        padding-left: 10px;
+        padding-right: 3px;
+    }
+    
+    .name {
+        font-size: 125%;
+        letter-spacing: 1px; 
+    } 
+
+    .showDeleteButton {
+        font-size: 1rem;
+    }
+
+}
 
 
 

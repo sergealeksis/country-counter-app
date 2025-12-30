@@ -55,7 +55,7 @@ export const VisitedCountriesLinkPage = () => {
     if (isLoading) {
       return (
         <div>
-          <h1 className={styles.h1}>Loading list of your visited countries...</h1>
+          <h1 className={styles.h1}>Loading list of visited countries...</h1>
         </div>
       );
     }
@@ -65,7 +65,7 @@ export const VisitedCountriesLinkPage = () => {
     if (isLoading) {
       return (
         <div>
-          <h1 className={styles.h1}>Loading list of your visited countries...</h1>
+          <h1 className={styles.h1}>Loading list of visited countries...</h1>
         </div>
       );
     }
@@ -82,8 +82,11 @@ export const VisitedCountriesLinkPage = () => {
     if (visitedCountries.length === 1) {
       return (
         <div>
-          <h1 className={styles.h1}>{ 
-            `${userName} has been to ${visitedCountries.length} country 🎉`}</h1>
+          <h1 className={styles.h1}>
+              {userName} has been to{' '}
+            <br className={styles.mobileBreak} />
+              {visitedCountries.length} country 🎉
+          </h1>
           <h2 className={styles.h2}>
               {`What's next on ${userName}'s journey?`} 🗺️</h2>
         </div>
@@ -91,8 +94,11 @@ export const VisitedCountriesLinkPage = () => {
     } else {
       return (
       <div>
-          <h1 className={styles.h1}>{ 
-            `${userName} has been to ${visitedCountries.length} countries 🎉`}</h1>
+          <h1 className={styles.h1}>
+              {userName} has been to{' '}
+            <br className={styles.mobileBreak} />
+              {visitedCountries.length} countries 🎉
+          </h1>
           <h2 className={styles.h2}>
               {`What's next on ${userName}'s journey?`} 🗺️</h2>
         </div>

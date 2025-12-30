@@ -9,11 +9,11 @@ export const VisitedListComponent = ({ visitedCountries, isShared = false }) => 
     const visitedListState = useSelector((state) => state.visitedList.visited);
     const visitedListAllowed = visitedCountries || visitedListState;
     const [showDelete, setShowDelete] = useState('hideDeleteButton');
-    const [buttonText, setButtonText] = useState('Edit list')
+    const [buttonText, setButtonText] = useState('Edit')
 
     const editButtonFunction = () => {
         setShowDelete(showDelete === 'hideDeleteButton' ? 'showDeleteButton' : 'hideDeleteButton');
-        setButtonText(showDelete === 'hideDeleteButton' ? 'Done' : 'Edit list')
+        setButtonText(showDelete === 'hideDeleteButton' ? 'Done' : 'Edit')
     }
 
   return (

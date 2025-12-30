@@ -58,9 +58,10 @@ export const ShareModal = ({ isOpen, onClose, listName, shareLink }) => {
                       `Check out the countries I've visited! 🗺️📍`;
 
   
-  const shareTelegram = () => {
-  const text = `${messageText()}\n ${shareLink}\n 🌍 by Country Counter`;
-  window.open(`https://t.me/share/url?url=${encodeURIComponent(text)}`, '_blank');
+ const shareTelegram = () => {
+  const url = encodeURIComponent(shareLink);
+  const text = encodeURIComponent(`${messageText()}\n🌍 by Country Counter`);
+  window.open(`https://t.me/share/url?url=${url}&text=${text}`, '_blank');
 };
 
 const shareWhatsApp = () => {

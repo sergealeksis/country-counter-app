@@ -88,8 +88,10 @@ export const WishListLinkPage = () => {
     if (wishlistCountries.length === 1) {
       return (
         <div>
-          <h1 className={styles.h1}>{ 
-            `${userName} has ${wishlistCountries.length} country to explore! ✈️`}</h1>
+          <h1 className={styles.h1}>
+            {userName} has {wishlistCountries.length} country 
+            <br className={styles.mobileBreak} />
+            to explore! ✈️</h1>
           <h2 className={styles.h2}>
               {`${userName}'s wishlist is calling!`}</h2>
         </div>
@@ -97,8 +99,10 @@ export const WishListLinkPage = () => {
     } else {
       return (
       <div>
-          <h1 className={styles.h1}>{ 
-            `${userName} has ${wishlistCountries.length} country to explore! ✈️`}</h1>
+          <h1 className={styles.h1}>
+            {userName} has {wishlistCountries.length} country 
+            <br className={styles.mobileBreak} />
+            to explore! ✈️</h1>
           <h2 className={styles.h2}>
              {`${userName}'s wishlist is calling!`}</h2>
         </div>
@@ -108,7 +112,7 @@ export const WishListLinkPage = () => {
 
   return (
     <div className={styles.root}>
-    <div className={styles.greetings}>{greetings()}</div>
+    <div className={styles.greetings_shared}>{greetings()}</div>
       <WishListComponent wishlistCountries={wishlistCountries} isShared={true}/>
     </div>
   )

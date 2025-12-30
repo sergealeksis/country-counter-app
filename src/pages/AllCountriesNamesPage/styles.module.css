@@ -1,7 +1,9 @@
 .root {
     position: relative;
-    background: black;
-    display: inline flex;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
     font-family: 
       'EireneSans',
@@ -19,16 +21,105 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-
+    -webkit-tap-highlight-color: transparent;
 }
 
 .all {
     background-color: black;
+    -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 768px) {
+    .root {
+        display: inline-flex;
+        flex-wrap: nowrap;
+        overflow-x: auto; 
+        overflow-y: hidden; 
+        -webkit-overflow-scrolling: touch; 
+        white-space: nowrap; 
+        width: 100vw; 
+        min-width: min-content; 
+        padding: 10px 0;
+        transform: none;
+    }
+    
+    .all {
+        width: 100%;
+        overflow-x: auto; 
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        background-color: black;
+        position: relative;
+        min-height: 100vh;
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    .root * {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+    }
+    
+    .root {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    
+    .root::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .root {
+        -ms-overflow-style: none; 
+        scrollbar-width: none;
+    }
+
+    .root_mobile {
+        background: black;
+    }
+
+    .all_names_mobile {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        padding: 1px 0;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+@media (max-width: 480px) {
+    .root {
+        padding: 5px 0;
+    }
+    
+    .country {
+        min-height: 45px;
+        margin: 0 8px;
+    }
+
+    .all_names_mobile {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        padding: 1px 0;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .root_mobile {
+        background-color: black;
+    }
 }
 
 
-/* .root:has(> .wrapper:hover) {
-    margin-right: 0%;
-} */
-
-
+@media (max-width: 768px) and (orientation: landscape) {
+    .root {
+        min-height: 50vh; 
+    }
+}

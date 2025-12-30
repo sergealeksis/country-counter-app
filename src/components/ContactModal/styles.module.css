@@ -76,7 +76,12 @@
     font-size: 110%;
     font-family: sans-serif;
     align-items: center;
-    justify-content: center;   
+    justify-content: center;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    outline: none; 
+    color: #333; 
 }
 
 .modal_close_button:hover {
@@ -179,11 +184,26 @@ img {
     }
     
     .modal_close_button {
-        top: 5px;
-        right: 5px;
-        width: 25px;
-        height: 25px;
+        display: flex;
+        position: absolute;
+        top: -2px;
+        right: -2px;
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+        margin: 5px;
+        background-color: transparent;
+        cursor: pointer;
+        border: none;
         font-size: 18px;
+        font-family: sans-serif;
+        align-items: center;
+        justify-content: center;
+        -webkit-appearance: none;
+        -webkit-tap-highlight-color: transparent;
+        user-select: none;
+        outline: none; 
+        color: #333; 
     }
 }
 
@@ -202,11 +222,26 @@ img {
     }
     
     .modal_close_button {
-        top: 3px;
-        right: 3px;
-        width: 22px;
-        height: 22px;
-        font-size: 16px;
+        display: flex;
+        position: absolute;
+        top: -2px;
+        right: -2px;
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+        margin: 5px;
+        background-color: transparent;
+        cursor: pointer;
+        border: none;
+        font-size: 110%;
+        font-family: sans-serif;
+        align-items: center;
+        justify-content: center;
+        -webkit-appearance: none;
+        -webkit-tap-highlight-color: transparent;
+        user-select: none;
+        outline: none; 
+        color: #333; 
     }
 }
 

@@ -101,7 +101,7 @@ export const App = () => {
   }, []);
 
   if (loading) {
-    return <div>...loading</div>;
+    return <div><h1 className='h1'>Loading...</h1></div>;
   }
 
   if (error) {

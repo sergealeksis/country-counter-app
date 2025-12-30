@@ -50,5 +50,9 @@
   .footer_links {
     justify-content: center;
   }
+
+  .footer_links_container {
+    display: none;
+  }
 }
 

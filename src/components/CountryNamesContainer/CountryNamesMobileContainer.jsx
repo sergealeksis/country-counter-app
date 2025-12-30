@@ -6,7 +6,7 @@ import { COUNTRY_NAMES } from '../../constans/countries/countries';
 import { addCountryToVisitedWithSync } from '../VisitedListComponent/reducer';
 import { useDataLoader } from '../hooks/useDataLoader';
 
-export const CountryNamesContainer = ({ children }) => {
+export const CountryNamesMobileContainer = ({ children }) => {
     const dispatch = useDispatch();
     const [isAnimating, setIsAnimating] = useState(false);
 
@@ -54,9 +54,9 @@ export const CountryNamesContainer = ({ children }) => {
     const likeClassName = `${likeStyle} ${isAnimating ? styles.animating : ''}`;
 
     return (
-        <div className={styles.root}>
+        <div className={styles.root_mobile}>
             <div className={styles.wrapper}>
-                <div className={styles.country}>
+                <div className={styles.country_mobile}>
                     <div className={mainStyle} title={'you have been there'}>
                         <div 
                             className={addStyle}

@@ -198,10 +198,14 @@
 
 
 .rootAdd .wrapper {
+    display: flex;
     width: 45px;
+    height: 45px;
     place-self: center;
     place-content: center;
     align-content: center;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
 }
 
 .rootAdd .wrapper:hover {
@@ -362,5 +366,53 @@
         opacity: 1;
     }
 }
+
+@media (max-width: 768px) {
+    .modalName {
+        font-size: 150%;
+    }
+    
+    .rootWish {
+        font-size: 250%;
+    }
+    
+    .rootAdd {
+        font-size: 175%;
+    }
+    
+    .rootInfoLoader,
+    .rootInfoVisited {
+        font-size: 150%;
+    }
+    
+    .rootInfoWished {
+        font-size: 120%;
+    }
+}
+
+@media (max-width: 480px) {
+    .modalName {
+        font-size: 150%;
+    }
+    
+    .rootWish {
+        font-size: 250%;
+    }
+    
+    .rootAdd {
+        font-size: 175%;
+    }
+    
+    .rootInfoLoader,
+    .rootInfoVisited {
+        font-size: 150%;
+    }
+    
+    .rootInfoWished {
+        font-size: 120%;
+    }
+    
+}
+
 
 
