@@ -104,9 +104,9 @@ export const VisitedCountriesPage = () => {
       return (
         <div>
           <h1 className={styles.h1}>
-            {userName()}, you've been to {' '}
+            {userName()}, you've been {' '}
               <br className={styles.mobileBreak} />
-            {visitedCountries.length} country 🎉
+            to {visitedCountries.length} country 🎉
           </h1>
           <h2 className={styles.h2}>
               What's next on your journey? 🗺️</h2>
@@ -122,9 +122,9 @@ export const VisitedCountriesPage = () => {
       return (
       <div>
           <h1 className={styles.h1}>
-            {userName()}, you've been to {' '}
+            {userName()}, you've been {' '}
               <br className={styles.mobileBreak} />
-            {visitedCountries.length} countries 🎉
+            to {visitedCountries.length} countries 🎉
           </h1>
           <h2 className={styles.h2}>
               What's next on your journey? 🗺️</h2>

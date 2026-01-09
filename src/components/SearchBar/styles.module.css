@@ -80,6 +80,7 @@
     align-self: center;
 }
 
+
 .input_field:focus {
     border-color: #007bff;
     -webkit-box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
@@ -192,9 +193,10 @@
     .input_field {
         width: 80vw;
         font-size: 20px;
-        min-height: 50px;
-        height: 50px;
+        line-height: 1.5;
+        resize: none;
     }
+    
     
     .input_field::-webkit-input-placeholder {
         font-size: 18px;

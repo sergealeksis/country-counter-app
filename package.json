@@ -35,15 +35,16 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "build": "react-scripts build && npm run generate-seo",
+    "test": "react-scripts test", 
     "eject": "react-scripts eject",
     "css:modules": "npx postcss \"src/**/styles.module.css\" --base src --dir dist",
     "css:watch": "npx postcss \"src/**/styles.module.css\" --base src --dir dist --watch",
     "css:build": "npm run css:modules",
     "deploy": "npm run build && npx firebase-tools deploy --only hosting",
-    "deploy:prod": "npm run build && npx firebase-tools deploy --only hosting --project production"
-  },
+    "deploy:prod": "npm run build && npx firebase-tools deploy --only hosting --project production",
+    "generate-seo": "node scripts/generate-sitemap.js"
+  },  
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -65,6 +66,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.22",
     "postcss": "^8.5.6",
-    "postcss-cli": "^11.0.1"
+    "postcss-cli": "^11.0.1",
+    "sitemap": "^9.0.0"
   }
 }

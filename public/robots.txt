@@ -1,3 +1,17 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+
+User-agent: Googlebot
+Allow: /
+Disallow: /signin/
+Disallow: /profile/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /signin/
+Disallow: /profile/
+
+Sitemap: https://countrycounter.online/sitemap.xml

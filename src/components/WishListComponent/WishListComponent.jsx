@@ -10,12 +10,14 @@ export const WishListComponent = ({ wishlistCountries, isShared = false }) => {
 
     return (
       <div className={styles.root}>
-        {wishListAllowed.map(e => 
-        <WishListContainer
-          country={COUNTRY_INFO[e]}
-          isShared={isShared}
-        />
-        )}
+        <div className={styles.content_wrapper}>
+          {wishListAllowed.map(e => 
+          <WishListContainer
+            country={COUNTRY_INFO[e]}
+            isShared={isShared}
+          />
+          )}
+        </div>
       </div>
     )
 }

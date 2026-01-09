@@ -1,9 +1,17 @@
 .root {
     height: 100%;
     width: 100%;
-   
     display: inline-block;
     text-align: center;
+    justify-content: center; 
+}
+
+.content_wrapper {
+    width: 90%;
+    position: relative;
     justify-content: center;
-    
+    align-items: center;
+    margin: 0 auto;
+    z-index: 1;
+    margin-top: 10px;
 }

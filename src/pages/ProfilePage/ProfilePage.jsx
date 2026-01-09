@@ -22,9 +22,9 @@ export const ProfilePage = () => {
   
   const validateUsername = () => {
     if (!newDisplayName.trim()) 
-      return 'username cannot be empty';
+      return 'Username cannot be empty';
     if (newDisplayName.length > 25) 
-    return 'max 25 symbols';
+    return 'Max 25 symbols';
     return null;
   };
 
