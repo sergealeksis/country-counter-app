@@ -7,8 +7,6 @@ import { signOut } from 'firebase/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from '../../firebase.config';
 import styles from './styles.module.css';
-import { ContactModal } from '../ContactModal/ContactModal';
-import { CoffeeModal } from '../CoffeeModal/CoffeeModal';
 import { ContactModalMobile } from '../ContactModal/ContactModalMobile';
 import { CoffeeModalMobile } from '../CoffeeModal/CoffeeModalMobile';
 

@@ -19,6 +19,7 @@ import { VisitedCountriesLinkPage } from './pages/VisitedCountriesPage/VisitedCo
 import { FooterSharedLink } from './components/Footer/FooterSharedLink';
 import { HeaderSharedLink } from './components/Header/HeaderSharedLink';
 import { WishListLinkPage } from './pages/WishListPage/WishListLinkPage';
+import { SEO } from './components/SEO';
 
 
 const ProtectedRoute = ({ children }) => {
@@ -109,49 +110,85 @@ export const App = () => {
   }
 
   return (
+
     <ReduxProvider store={store}>
+
+      <SEO 
+        title='Country Counter'
+        description='Create your travel list'
+      />
+      
         <Routes> 
+
           <Route 
             path='/' 
             element={
-              <PublicRoute>
-                <PublicLayout>
-                  <HomePage />
-                </PublicLayout>
-              </PublicRoute>
+              <>
+                <SEO 
+                  title='Country Counter App' 
+                  description = 'Create your travel list'
+                  keywords='countries, travel, flags, counter, visited, wishlist'
+                />
+                <PublicRoute>
+                  <PublicLayout>
+                    <HomePage />
+                  </PublicLayout>
+                </PublicRoute>
+              </>
             } 
-          />
+            />
+
           <Route 
             path='sign-in' 
             element={
-              <PublicRoute>
-                <PublicLayout>
-                  <SignInPage />
-                </PublicLayout>
-              </PublicRoute>
+              <>
+                <SEO 
+                  title='Sign in page' 
+                  description='Sign in or sign up'
+                />
+                <PublicRoute>
+                  <PublicLayout>
+                    <SignInPage />
+                  </PublicLayout>
+                </PublicRoute>
+              </>
             } 
           />
-          
+            
           <Route 
             path='allflags' 
             element={
-              <ProtectedRoute>
-                <ProtectedLayout>
-                  <AllCountriesFlagsPage />
-                </ProtectedLayout>
-              </ProtectedRoute>
+              <>
+                <SEO 
+                  title='Flags of countries' 
+                  description='All countries by flags'
+                />
+                <ProtectedRoute>
+                  <ProtectedLayout>
+                    <AllCountriesFlagsPage />
+                  </ProtectedLayout>
+                </ProtectedRoute>
+              </>
             } 
           />
+
           <Route 
             path='wishlist' 
             element={
-              <ProtectedRoute>
-                <ProtectedLayout>
-                  <WishListPage />
-                </ProtectedLayout>
-              </ProtectedRoute>
+              <>
+                <SEO 
+                  title='Countries wishlist' 
+                  description='Discover new destinations'
+                />
+                <ProtectedRoute>
+                  <ProtectedLayout>
+                    <WishListPage />
+                  </ProtectedLayout>
+                </ProtectedRoute>
+              </>
             } 
           />
+
           <Route 
             path='/shared/wishlist/:publicId' 
             element={
@@ -160,26 +197,41 @@ export const App = () => {
               </SharedLayout>
             } 
           />
+
           <Route 
             path='allnames' 
             element={
-              <ProtectedRoute>
-                <ProtectedLayout>
-                  <AllCountriesNamesPage />
-                </ProtectedLayout>
-              </ProtectedRoute>
+              <>
+                <SEO 
+                  title='Names of countries' 
+                  description='All countries by names'
+                />
+                <ProtectedRoute>
+                  <ProtectedLayout>
+                    <AllCountriesNamesPage />
+                  </ProtectedLayout>
+                </ProtectedRoute>
+              </>
             } 
           />
+
           <Route 
             path='visited' 
             element={
-              <ProtectedRoute>
-                <ProtectedLayout>
-                  <VisitedCountriesPage />
-                </ProtectedLayout>
-              </ProtectedRoute>
+              <>
+                <SEO 
+                  title='Visited countries page' 
+                  description='Keep track where you have been'
+                />
+                <ProtectedRoute>
+                  <ProtectedLayout>
+                    <VisitedCountriesPage />
+                  </ProtectedLayout>
+                </ProtectedRoute>
+              </>
             } 
           />
+
           <Route 
             path='/shared/visitedlist/:publicId' 
             element={
@@ -188,24 +240,39 @@ export const App = () => {
               </SharedLayout>
             } 
           />
+
           <Route 
             path='profile' 
             element={
-              <ProtectedRoute>
-                <ProtectedLayout>
-                  <ProfilePage />
-                </ProtectedLayout>
-              </ProtectedRoute>
+              <>
+                <SEO 
+                  title='Profile page' 
+                  description='Sser name and settings, get random country'
+                />
+                <ProtectedRoute>
+                  <ProtectedLayout>
+                    <ProfilePage />
+                  </ProtectedLayout>
+                </ProtectedRoute>
+              </>
             } 
           />
+
           <Route 
             path='*' 
             element={
-              <PublicLayout>
-                <NotFoundPage />
-              </PublicLayout>
+              <>
+                <SEO 
+                  title='Page not found' 
+                  description="The requested page does not exist"
+                />
+                <PublicLayout>
+                  <NotFoundPage />
+                </PublicLayout>
+              </>
             } 
           />
+
         </Routes>
     </ReduxProvider>
   );
