@@ -67,9 +67,6 @@ const SharedLayout = ({ children }) => {
   );
 };
 
-
-
-
 export const App = () => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -114,8 +111,8 @@ export const App = () => {
     <ReduxProvider store={store}>
 
       <SEO 
-        title='Country Counter'
-        description='Create your travel list'
+        title='Country Flags and Country Counter'
+        description='Discover flags and create your travel lists'
       />
       
         <Routes> 
@@ -125,8 +122,8 @@ export const App = () => {
             element={
               <>
                 <SEO 
-                  title='Country Counter App' 
-                  description = 'Create your travel list'
+                  title='Country Counter' 
+                  description = 'Discover flags and create your travel lists'
                   keywords='countries, travel, flags, counter, visited, wishlist'
                 />
                 <PublicRoute>
@@ -247,7 +244,7 @@ export const App = () => {
               <>
                 <SEO 
                   title='Profile page' 
-                  description='Sser name and settings, get random country'
+                  description='User name and settings, get random country'
                 />
                 <ProtectedRoute>
                   <ProtectedLayout>

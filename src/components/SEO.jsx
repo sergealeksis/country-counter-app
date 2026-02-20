@@ -2,8 +2,8 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async';
 
 export const SEO = ({ 
-    title = 'Country Counter App',
-    description = 'Create your travel list, share it with your friends, create wish lists and track them.',
+    title = 'Country Counter',
+    description = 'Country Counter - Complete Collection of National Flags, App to Create Your Travel and Wishlists',
     keywords = 'countries, travel, flags, counter, visited, wishlist',
     url = window.location.href
   }) => {

@@ -11,7 +11,9 @@ export const HomePage = () => {
                 <p>Share it with your friends,</p>
                 <p>create wish lists and track them.</p>
                 <p>Keep track of where you've been</p>
-                <p>and discover new destinations</p>
+                <p>and discover new destinations.</p>
+                <p></p>
+                <p>Or just browse country flags!</p>
                 <Link className={styles.start_btn} to='/sign-in'>Get started</Link>
             </div>     
         </div>
